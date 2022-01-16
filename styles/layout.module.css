@@ -1,0 +1,62 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.page__header {
+  flex: 0 0 114px;
+  background: #1C1C1C;
+  padding: 0 30px;
+}
+
+.page__main {
+  flex: 1 1 auto;
+  background: #272727;
+  padding: 0 30px;
+}
+
+.page__footer {
+  flex: 0 1 auto;
+  background: #1C1C1C;
+  padding: 0 30px;
+}
+
+/* Todo: reconsider this breakpoint */
+@media screen and (max-width: 700px) {
+  .page__header {
+    padding: 0 15px;
+  }
+  .page__main {
+    padding: 0 15px;
+  }
+  .page__footer {
+    padding: 0 15px;
+  }
+}
+
+/* Todo: reconsider this breakpoint */
+@media screen and (max-width: 400px) {
+  .page__header {
+    padding: 0 0px;
+  }
+  .page__main {
+    padding: 0 0px;
+  }
+  .page__footer {
+    padding: 0 0px;
+  }
+}
+
+.wrapper {
+  max-width: 1316px;
+  margin: 0 auto;
+  width: auto;
+}
+
+.logolink {
+  display: block;
+}
+
+
