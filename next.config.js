@@ -182,8 +182,8 @@ const nextConfig = {
         destination: newPath,
         permanent: true,
       }))
-    ]
+    ];
   }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,62 +1,166 @@
+/* ============================================
+    Main layout
+============================================ */
+
 .page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 300px;
   color: #ffffff;
+  font-size: 14px;
+  position: relative;
 }
 
 .page__header {
-  flex: 0 0 114px;
+  flex: 0 0 70px;
   background: #1C1C1C;
-  padding: 0 30px;
+  padding: 0 15px;
+  display: flex;
 }
 
 .page__main {
   flex: 1 1 auto;
   background: #272727;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 .page__footer {
   flex: 0 1 auto;
   background: #1C1C1C;
-  padding: 0 30px;
+  padding: 30px 15px;
 }
 
-/* Todo: reconsider this breakpoint */
-@media screen and (max-width: 700px) {
-  .page__header {
-    padding: 0 15px;
-  }
-  .page__main {
-    padding: 0 15px;
-  }
-  .page__footer {
-    padding: 0 15px;
-  }
-}
-
-/* Todo: reconsider this breakpoint */
-@media screen and (max-width: 400px) {
-  .page__header {
-    padding: 0 0px;
-  }
-  .page__main {
-    padding: 0 0px;
-  }
-  .page__footer {
-    padding: 0 0px;
-  }
-}
-
-.wrapper {
+.page__sideborders {
   max-width: 1316px;
   margin: 0 auto;
   width: auto;
 }
 
+@media screen and (min-width: 550px) {
+  .page {
+    font-size: 18px;
+  }
+
+  .page__header {
+    flex-basis: 114px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .page__header,
+  .page__main,
+  .page__footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* ============================================
+    Header layout
+============================================ */
+
+.page__header .page__sideborders {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logolink {
+  display: flex;
+  background: left url("/images/layout/logo.png") no-repeat;
+  background-size: contain;
+  height: 60px;
+  align-self: flex-end;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logolink__title {
+  color: #FFD600;
+  font: bold 18px 'Oswald';
+  text-transform: uppercase;
+  margin-left: 45%;
+  line-height: 1.1;
+}
+
+.logolink__subtitle {
+  color: #808080;
+  margin-left: 45%;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.sandwichbutton {
   display: block;
+  border: none;
+  width: 52px;
+  height: 70px;
+  background: center url("/images/layout/sandwich.svg") no-repeat;
+  cursor: pointer;
+}
+
+.sandwichbutton:hover {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(17%) saturate(5087%) hue-rotate(358deg) brightness(103%) contrast(105%);
+}
+
+.sandwichbutton_opened {
+  background-image: url("/images/layout/cross.svg");
+}
+
+@media screen and (min-width: 375px) {
+  .logolink {
+    flex-grow: 0;
+  }
+  .logolink__title,
+  .logolink__subtitle {
+    margin-left: 125px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .logolink {
+    height: 102px;
+  }
+  .logolink__title {
+    font-size:28px;
+    margin-left: 211px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .logolink__subtitle {
+    font-size:16px;
+    margin-left: 211px;
+  }
+  .sandwichbutton {
+    width: 82px;
+  }
+}
+/* ============================================
+    Sandwich navigation
+============================================ */
+
+.sandwichpopup {
+  display: none;
+}
+
+.sandwichpopup_opened {
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #272727;
+}
+
+@media screen and (min-width: 550px) {
+  .sandwichpopup_opened {
+    top: 114px;
+  }
 }
 
 
