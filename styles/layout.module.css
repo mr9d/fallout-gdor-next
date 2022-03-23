@@ -32,7 +32,7 @@
 .page__footer {
   flex: 0 1 auto;
   background: #1C1C1C;
-  padding: 30px 15px;
+  padding: 2.5em 15px 0;
 }
 
 .page__sideborders {
@@ -49,9 +49,15 @@
   .page__header {
     flex-basis: 114px;
   }
+
+  .page__footer {
+    font-size: 16px;
+  }
+
 }
 
 @media screen and (min-width: 750px) {
+
   .page__header,
   .page__main,
   .page__footer {
@@ -87,13 +93,13 @@
   color: #FFD600;
   font: bold 18px 'Oswald';
   text-transform: uppercase;
-  margin-left: 45%;
+  margin: 0 0 0 45%;
   line-height: 1.1;
 }
 
 .logolink__subtitle {
   color: #808080;
-  margin-left: 45%;
+  margin: 0 0 0 45%;
   line-height: 1.1;
   white-space: nowrap;
 }
@@ -119,6 +125,7 @@
   .logolink {
     flex-grow: 0;
   }
+
   .logolink__title,
   .logolink__subtitle {
     margin-left: 125px;
@@ -129,16 +136,19 @@
   .logolink {
     height: 102px;
   }
+
   .logolink__title {
-    font-size:28px;
+    font-size: 28px;
     margin-left: 211px;
     margin-top: 8px;
     margin-bottom: 8px;
   }
+
   .logolink__subtitle {
-    font-size:16px;
+    font-size: 16px;
     margin-left: 211px;
   }
+
   .sandwichbutton {
     width: 82px;
   }
@@ -149,6 +159,7 @@
     display: none;
   }
 }
+
 /* ============================================
     Header navigation
 ============================================ */
@@ -184,16 +195,16 @@
 
 .headernav section:nth-of-type(1) {
   border-right: 1px solid #555555;
-  flex: 1 1 calc((100% - 591.31px) / 4 + 233.58px);
+  flex: 1 1 calc((100% - 591.31px) / 10 * 3 + 233.58px);
 }
 
 .headernav section:nth-of-type(2) {
   border-right: 1px solid #555555;
-  flex: 1 1 calc((100% - 591.31px) / 4 + 186.14px);
+  flex: 1 1 calc((100% - 591.31px) / 10 * 4 + 186.14px);
 }
 
 .headernav section:nth-of-type(3) {
-  flex: 1 1 calc((100% - 591.31px) / 4 + 171.59px);
+  flex: 1 1 calc((100% - 591.31px) / 10 * 3 + 171.59px);
 }
 
 .headernav h3 {
@@ -202,7 +213,7 @@
   font-size: 1em;
   font-weight: normal;
   color: #808080;
-  display:list-item;
+  display: list-item;
   list-style: disc;
   list-style-position: inside;
 }
@@ -243,7 +254,7 @@
 }
 
 .headernav a:hover {
-  color: #E3BF04;
+  color: #FFD600;
 }
 
 /* ============================================
@@ -324,5 +335,153 @@
 }
 
 .sandwichpopup a:hover {
-  color: #E3BF04;
+  color: #FFD600;
+}
+
+/* ============================================
+    Footer
+============================================ */
+
+.page__footer p {
+  margin: 0;
+}
+
+.footerslogan {
+  text-align: center;
+  color: #808080;
+  margin: 0 0 1em;
+}
+
+.footertoplink {
+  text-align: right;
+  margin-bottom: 2em;
+}
+
+.footertoplink a {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  padding: 0.5em 2em;
+}
+
+.footertoplink a:hover {
+  color: #FFD600;
+  border-color: #FFD600;
+}
+
+.footerlinks {
+  margin-bottom: 1em;
+}
+
+.footerlinks ul {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-auto-flow: row;
+  margin: 0;
+  padding: 0;
+}
+
+.footerlinks li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.footerlinks a:hover {
+  color: #FFD600;
+}
+
+.footercontacts {
+  margin-bottom: 1em;
+  clear: both;
+}
+
+.footercontacts ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footercontacts li {
+  list-style: none;
+  margin-right: 14px;
+}
+
+.footercontacts a {
+  display: block;
+  line-height: 1;
+}
+
+.footercontacts a:hover {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(17%) saturate(5087%) hue-rotate(358deg) brightness(103%) contrast(105%);
+}
+
+.footertechnologies {
+  margin-bottom: 2em;
+}
+
+.footertechnologies ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footertechnologies li {
+  list-style: none;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  opacity: .5;
+}
+
+.footercopyright {
+  margin-bottom: 2.5em;
+}
+
+.footercopyright p {
+  color: #808080;
+}
+
+@media screen and (min-width: 550px) {
+  .footerslogan {
+    float: left;
+    width: calc(100% - 150px);
+  }
+  .footertechnologies li {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .footerslogan {
+    text-align: left;
+  }
+  .footerlinks {
+    float: left;
+    width: 33.333%;
+    margin-right: 7%;
+  }
+  .footerlinks ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footertechnologies {
+    padding-top: 0.5em;
+  }
+  .footertechnologies ul {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .footercopyright {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footertechnologies ul {
+    justify-content: flex-end;
+  }
+  .footertechnologies li {
+    margin-left: 60px;
+  }
 }
