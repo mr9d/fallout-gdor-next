@@ -32,7 +32,7 @@
 .page__footer {
   flex: 0 1 auto;
   background: #1C1C1C;
-  padding: 2.5em 15px 0;
+  padding: 2.5em 15px 2.5em;
 }
 
 .page__sideborders {
@@ -53,11 +53,9 @@
   .page__footer {
     font-size: 16px;
   }
-
 }
 
 @media screen and (min-width: 750px) {
-
   .page__header,
   .page__main,
   .page__footer {
@@ -263,6 +261,7 @@
 
 .sandwichpopup {
   display: none;
+  z-index: 30;
   background-color: #1C1C1C;
   background-image: url("/images/layout/bg.png");
   background-repeat: repeat;
@@ -342,19 +341,26 @@
     Footer
 ============================================ */
 
+.page__footer .page__sideborders {
+  display: grid;
+  row-gap: 2em;
+  grid-template-areas:
+  "toplink"
+  "copyright"
+  "slogan"
+  "links"
+  "technologies"
+  "legal"
+  "contacts";
+}
+
 .page__footer p {
   margin: 0;
 }
 
-.footerslogan {
-  text-align: center;
-  color: #808080;
-  margin: 0 0 1em;
-}
-
 .footertoplink {
+  grid-area: toplink;
   text-align: right;
-  margin-bottom: 2em;
 }
 
 .footertoplink a {
@@ -368,36 +374,85 @@
   border-color: #FFD600;
 }
 
+.footercopyright {
+  grid-area: copyright;
+  text-align: center;
+}
+
+.footercopyright p {
+  color: #808080;
+}
+
+.footerslogan {
+  grid-area: slogan;
+  text-align: center;
+  color: #808080;
+}
+
 .footerlinks {
-  margin-bottom: 1em;
+  grid-area: links;
 }
 
 .footerlinks ul {
-  display: grid;
-  grid-template-columns: 1.5fr 2fr;
-  grid-auto-flow: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
   margin: 0;
   padding: 0;
 }
 
 .footerlinks li {
   list-style: none;
-  margin-bottom: 1em;
+  white-space: nowrap;
 }
 
 .footerlinks a:hover {
   color: #FFD600;
 }
 
+.footertechnologies {
+  grid-area: technologies;
+}
+
+.footertechnologies ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footertechnologies li {
+  list-style: none;
+  position: relative;
+  width: 4em;
+  height: 4em;
+  opacity: .5;
+}
+
+.footertechnologies li:nth-of-type(3) {
+  height: calc(4em / 1.12);
+}
+
+.footerlegal {
+  grid-area: legal;
+}
+
+.footerlegal p {
+  text-align: center;
+  color: #808080;
+}
+
 .footercontacts {
-  margin-bottom: 1em;
-  clear: both;
+  grid-area: contacts;
 }
 
 .footercontacts ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
 }
 
 .footercontacts li {
@@ -414,74 +469,67 @@
   filter: brightness(0) saturate(100%) invert(87%) sepia(17%) saturate(5087%) hue-rotate(358deg) brightness(103%) contrast(105%);
 }
 
-.footertechnologies {
-  margin-bottom: 2em;
-}
-
-.footertechnologies ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.footertechnologies li {
-  list-style: none;
-  position: relative;
-  width: 60px;
-  height: 60px;
-  opacity: .5;
-}
-
-.footercopyright {
-  margin-bottom: 2.5em;
-}
-
-.footercopyright p {
-  color: #808080;
-}
-
 @media screen and (min-width: 550px) {
-  .footerslogan {
-    float: left;
-    width: calc(100% - 150px);
-  }
   .footertechnologies li {
-    width: 90px;
-    height: 90px;
+    width: 6em;
+    height: 6em;
   }
-}
 
-@media screen and (min-width: 750px) {
-  .footerslogan {
-    text-align: left;
-  }
-  .footerlinks {
-    float: left;
-    width: 33.333%;
-    margin-right: 7%;
-  }
-  .footerlinks ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .footertechnologies {
-    padding-top: 0.5em;
-  }
-  .footertechnologies ul {
-    justify-content: space-between;
+  .footertechnologies li:nth-of-type(3) {
+    height: calc(6em / 1.12);
   }
 }
 
 @media screen and (min-width: 1100px) {
+  .page__footer .page__sideborders {
+    display: grid;
+    row-gap: 0;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-areas:
+    "toplink    toplink toplink"
+    "copyright  links   technologies"
+    "slogan     links   technologies"
+    "contacts   legal   legal";
+  }
+
+  .footertoplink {
+    margin-bottom: 2em;
+  }
+
   .footercopyright {
-    display: flex;
+    text-align: left;
+  }
+
+  .footerslogan {
+    text-align: left;
+  }
+
+  .footerlinks {
+    align-self: stretch;
+  }
+
+  .footerlinks ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    padding-left: 2em;
+  }
+
+  .footercontacts {
+    align-self: end;
+  }
+
+  .footercontacts ul {
+    justify-content: flex-start;
+  }
+
+  .footertechnologies ul {
+    margin-left: 2em;
     justify-content: space-between;
   }
-  .footertechnologies ul {
-    justify-content: flex-end;
-  }
-  .footertechnologies li {
-    margin-left: 60px;
+
+  .footerlegal p {
+    text-align: right;
+    margin-top: 2em;
   }
 }

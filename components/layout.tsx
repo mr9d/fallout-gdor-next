@@ -57,11 +57,14 @@ const Layout: FC = ({ children }) => {
       </main>
       <footer className={styles.page__footer}>
         <div className={styles.page__sideborders}>
-          <section className={styles.footerslogan}>
-            <p>There{"'"}s two kinds of people in the world: Those with loaded guns, and those who dig. We&nbsp;dig.</p>
-          </section>
           <section className={styles.footertoplink}>
             <a href="#top">Наверх &uarr;</a>
+          </section>
+          <section className={styles.footercopyright}>
+            <p>&copy;2007-{new Date().getFullYear()}, <a href="mailto:kaa_12@mail.ru">Александр Козлов</a></p>
+          </section>
+          <section className={styles.footerslogan}>
+            <p>There{"'"}s two kinds of people in the world: Those with loaded guns, and those who dig. We&nbsp;dig.</p>
           </section>
           <nav className={styles.footerlinks}>
             <ul>
@@ -72,6 +75,11 @@ const Layout: FC = ({ children }) => {
               </li>
               <li>
                 <a href="https://github.com/mr9d/fallout-gdor-next">GitHub</a>
+              </li>
+              <li>
+                <ActiveLink href="/about/music" activeClassName={styles.active}>
+                  Музыка
+                </ActiveLink>
               </li>
               <li>
                 <ActiveLink href="/gallery/dgt-comics" activeClassName={styles.active}>
@@ -89,11 +97,6 @@ const Layout: FC = ({ children }) => {
                 </ActiveLink>
               </li>
               <li>
-                <ActiveLink href="/about/music" activeClassName={styles.active}>
-                  Музыка
-                </ActiveLink>
-              </li>
-              <li>
                 <ActiveLink href="/about/links" activeClassName={styles.active}>
                   Ссылки
                 </ActiveLink>
@@ -102,11 +105,22 @@ const Layout: FC = ({ children }) => {
           </nav>
           <section className={styles.footertechnologies}>
             <ul>
-              <li><Image src={html5Svg} layout="fill" alt="HTML5" /></li>
-              <li><Image src={css3Svg} layout="fill" alt="CSS3" /></li>
-              <li><Image src={reactSvg} layout="fill" alt="React" /></li>
-              <li><Image src={nextjsSvg} layout="fill" alt="Next.js" /></li>
+              <li>
+                <Image src={html5Svg} layout="fill" alt="HTML5" />
+              </li>
+              <li>
+                <Image src={css3Svg} layout="fill" alt="CSS3" />
+              </li>
+              <li>
+                <Image src={reactSvg} layout="fill" alt="React" />
+              </li>
+              <li>
+                <Image src={nextjsSvg} layout="fill" alt="Next.js" />
+              </li>
             </ul>
+          </section>
+          <section className={styles.footerlegal}>
+            <p>Использование материалов сайта только с письменного разрешения&nbsp;автора</p>
           </section>
           <section className={styles.footercontacts}>
             <ul>
@@ -131,12 +145,6 @@ const Layout: FC = ({ children }) => {
                 </a>
               </li>
             </ul>
-          </section>
-          <section className={styles.footercopyright}>
-            <p>
-              &copy;2007-{new Date().getFullYear()}, <a href="mailto:kaa_12@mail.ru">Александр Козлов</a>
-            </p>
-            <p>Использование материалов сайта только с письменного разрешения&nbsp;автора</p>
           </section>
         </div>
       </footer>
