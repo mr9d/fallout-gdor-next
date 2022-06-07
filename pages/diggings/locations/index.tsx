@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../app/components/Breadcrumbs";
 
 const LocationsDiggingsPage: NextPage = () => {
-  return <div>Раскопки - локации</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Раскопки - локации</div>
+    </>
+  );
 };
 
 export default LocationsDiggingsPage;

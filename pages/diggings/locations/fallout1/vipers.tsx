@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const VipersDiggingsPage: NextPage = () => {
-  return <div>Раскопки - Vipers/Гадюки</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Раскопки - Гадюки</div>
+    </>
+  );
 };
 
 export default VipersDiggingsPage;

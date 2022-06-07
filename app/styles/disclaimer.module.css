@@ -1,0 +1,18 @@
+.disclaimer {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/images/disclaimer-bg.jpg") center 68%;
+  background-size: cover;
+  padding: 1.5em 15px;
+  margin-bottom: 2.5em;
+}
+
+.disclaimer p {
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 750px) {
+  .disclaimer {
+    padding: 1.5em 30px;
+  }
+}

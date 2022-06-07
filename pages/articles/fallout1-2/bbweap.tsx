@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../app/components/Breadcrumbs";
 
 const BbWeapArticlePage: NextPage = () => {
-  return <div>Fallout 1-2 articles - Оружие Френка Хорригана</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Fallout 1-2 articles - Оружие Френка Хорригана</div>
+    </>
+  );
 };
 
 export default BbWeapArticlePage;

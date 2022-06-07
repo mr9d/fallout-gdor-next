@@ -1,8 +1,12 @@
 import type { NextPage } from "next";
+import { Disclaimer } from "../app/components/Disclaimer";
 
 const HomePage: NextPage = () => {
   return (
     <>
+      <Disclaimer>
+        <p>lalala</p>
+      </Disclaimer>
       <div>Новости</div>
       <p>
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at

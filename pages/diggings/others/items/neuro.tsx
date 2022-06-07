@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const NeuroPage: NextPage = () => {
-  return <div>Нейронный интерфейс</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Нейронный интерфейс</div>
+    </>
+  );
 };
 
 export default NeuroPage;

@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const SwitchPage: NextPage = () => {
-  return <div>Переключатель полей</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Переключатель полей</div>
+    </>
+  );
 };
 
 export default SwitchPage;

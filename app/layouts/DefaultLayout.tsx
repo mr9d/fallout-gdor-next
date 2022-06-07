@@ -1,20 +1,20 @@
 import { FC, useState, useCallback, useEffect } from "react";
 import { NextRouter, useRouter } from "next/router";
-import { ActiveLink } from "./activelink";
-import Navigation from "./navigation";
+import { ActiveLink } from "../components/ActiveLink";
+import Navigation from "../components/Navigation";
 import Image from "next/image";
 
 import styles from "../styles/layout.module.css";
-import emailSvg from "../public/images/layout/contacts/email.svg";
-import linkedinSvg from "../public/images/layout/contacts/linkedin.svg";
-import vkSvg from "../public/images/layout/contacts/vk.svg";
-import githubSvg from "../public/images/layout/contacts/github.svg";
-import html5Svg from "../public/images/layout/tech/html5.svg";
-import css3Svg from "../public/images/layout/tech/css3.svg";
-import reactSvg from "../public/images/layout/tech/react.svg";
-import nextjsSvg from "../public/images/layout/tech/nextjs.svg";
+import emailSvg from "../../public/images/layout/contacts/email.svg";
+import linkedinSvg from "../../public/images/layout/contacts/linkedin.svg";
+import vkSvg from "../../public/images/layout/contacts/vk.svg";
+import githubSvg from "../../public/images/layout/contacts/github.svg";
+import html5Svg from "../../public/images/layout/tech/html5.svg";
+import css3Svg from "../../public/images/layout/tech/css3.svg";
+import reactSvg from "../../public/images/layout/tech/react.svg";
+import nextjsSvg from "../../public/images/layout/tech/nextjs.svg";
 
-const Layout: FC = ({ children }) => {
+const DefaultLayout: FC = ({ children }) => {
   const [sandwichOpened, setSandwichOpened] = useState<boolean>(false);
   const router: NextRouter = useRouter();
 
@@ -53,7 +53,9 @@ const Layout: FC = ({ children }) => {
         <Navigation activeClassName={styles.active} />
       </aside>
       <main className={styles.page__main}>
-        <div className={styles.page__sideborders}>{children}</div>
+        <div className={styles.page__sideborders}>
+          {children}
+        </div>
       </main>
       <footer className={styles.page__footer}>
         <div className={styles.page__sideborders}>
@@ -61,7 +63,9 @@ const Layout: FC = ({ children }) => {
             <a href="#top">Наверх &uarr;</a>
           </section>
           <section className={styles.footercopyright}>
-            <p>&copy;2007-{new Date().getFullYear()}, <a href="mailto:kaa_12@mail.ru">Александр Козлов</a></p>
+            <p>
+              &copy;2007-{new Date().getFullYear()}, <a href="mailto:kaa_12@mail.ru">Александр Козлов</a>
+            </p>
           </section>
           <section className={styles.footerslogan}>
             <p>There{"'"}s two kinds of people in the world: Those with loaded guns, and those who dig. We&nbsp;dig.</p>
@@ -152,4 +156,4 @@ const Layout: FC = ({ children }) => {
   );
 };
 
-export default Layout;
+export default DefaultLayout;

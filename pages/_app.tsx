@@ -1,14 +1,14 @@
 import "normalize.css";
-import "../styles/fonts.css";
-import "../styles/globals.css";
+import "../app/styles/fonts.css";
+import "../app/styles/globals.css";
 import type { AppProps } from "next/app";
-import Layout from "../components/layout";
+import DefaultLayout from "../app/layouts/DefaultLayout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <DefaultLayout>
       <Component {...pageProps} />
-    </Layout>
+    </DefaultLayout>
   );
 }
 

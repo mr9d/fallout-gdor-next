@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const AbbeyDiggingsPage: NextPage = () => {
-  return <div>Раскопки - Abbey/Аббатство</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Раскопки - Аббатство</div>
+    </>
+  );
 };
 
 export default AbbeyDiggingsPage;

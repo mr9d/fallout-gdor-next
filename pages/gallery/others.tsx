@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../app/components/Breadcrumbs";
 
 const OthersGalleryPage: NextPage = () => {
-  return <div>Others Gallery</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Others Gallery</div>
+    </>
+  );
 };
 
 export default OthersGalleryPage;

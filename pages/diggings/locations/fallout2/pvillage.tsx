@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const PVillageDiggingsPage: NextPage = () => {
-  return <div>Раскопки - Primitive tribe/Примитивное племя</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Раскопки - Примитивное племя</div>
+    </>
+  );
 };
 
 export default PVillageDiggingsPage;

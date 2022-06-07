@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const FaqPage: NextPage = () => {
-  return <div>Who is mr. Van Buren?</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Who is mr. Van Buren?</div>
+    </>
+  );
 };
 
 export default FaqPage;

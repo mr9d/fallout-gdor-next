@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const HolodisksPage: NextPage = () => {
-  return <div>Голодиски</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Голодиски</div>
+    </>
+  );
 };
 
 export default HolodisksPage;

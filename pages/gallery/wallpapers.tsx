@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../app/components/Breadcrumbs";
 
 const WallpapersPage: NextPage = () => {
-  return <div>Wallpapers</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Обои</div>
+    </>
+  );
 };
 
 export default WallpapersPage;

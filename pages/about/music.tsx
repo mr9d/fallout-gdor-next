@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../app/components/Breadcrumbs";
 
 const MusicPage: NextPage = () => {
-  return <div>Музыка</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Музыка</div>
+    </>
+  );
 };
 
 export default MusicPage;

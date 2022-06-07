@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../app/components/Breadcrumbs";
 
 const DgtComicsPage: NextPage = () => {
-  return <div>DgtComics</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>DgtComics</div>
+    </>
+  );
 };
 
 export default DgtComicsPage;

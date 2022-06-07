@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const DenResDiggingsPage: NextPage = () => {
-  return <div>Раскопки - Den/Ден - южная часть города</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Раскопки - Южная часть Дена</div>
+    </>
+  );
 };
 
 export default DenResDiggingsPage;

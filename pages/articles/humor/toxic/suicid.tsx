@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const SuicidArticlePage: NextPage = () => {
-  return <div>Самоубийство как форма искусства</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Само***йство как форма искусства</div>
+    </>
+  );
 };
 
 export default SuicidArticlePage;

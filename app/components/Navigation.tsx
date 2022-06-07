@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
-import { ActiveLink } from "./activelink";
+import { ActiveLink } from "./ActiveLink";
 
 type NavigationProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
   activeClassName?: string;
@@ -58,7 +58,7 @@ const Navigation: FC<NavigationProps> = ({ activeClassName, ...props }): JSX.Ele
             </ActiveLink>
           </li>
           <li>
-            <ActiveLink href="/gallery/wallpapers" activeClassName={activeClassName}>
+            <ActiveLink href="/gallery" activeClassName={activeClassName}>
               Галерея
             </ActiveLink>
           </li>

@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const DezinfoArticlePage: NextPage = () => {
-  return <div>Дезинформация</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Дезинформация</div>
+    </>
+  );
 };
 
 export default DezinfoArticlePage;

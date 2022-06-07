@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const DemoPage: NextPage = () => {
-  return <div>Наследие демоверсии</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Наследие демоверсии</div>
+    </>
+  );
 };
 
 export default DemoPage;

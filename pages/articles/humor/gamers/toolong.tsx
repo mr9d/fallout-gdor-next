@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const TooLongArticlePage: NextPage = () => {
-  return <div>Вы слишком долго играли в Fallout, если...</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Вы слишком долго играли в Fallout, если...</div>
+    </>
+  );
 };
 
 export default TooLongArticlePage;

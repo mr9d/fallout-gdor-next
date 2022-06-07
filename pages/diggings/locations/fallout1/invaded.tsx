@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const InvadedDiggingsPage: NextPage = () => {
-  return <div>Раскопки - Супермутант Шон</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Раскопки - Супермутант Шон</div>
+    </>
+  );
 };
 
 export default InvadedDiggingsPage;

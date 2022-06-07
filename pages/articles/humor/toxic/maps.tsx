@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const MapsArticlePage: NextPage = () => {
-  return <div>Парадокс локаций</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Парадокс локаций</div>
+    </>
+  );
 };
 
 export default MapsArticlePage;

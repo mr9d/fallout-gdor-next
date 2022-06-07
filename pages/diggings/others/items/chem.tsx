@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const ChemPage: NextPage = () => {
-  return <div>Химический набор</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Химический набор</div>
+    </>
+  );
 };
 
 export default ChemPage;

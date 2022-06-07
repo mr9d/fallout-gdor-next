@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const CheatersArticlePage: NextPage = () => {
-  return <div>Читеры</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Читеры</div>
+    </>
+  );
 };
 
 export default CheatersArticlePage;

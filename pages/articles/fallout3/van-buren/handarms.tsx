@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const HandarmsPage: NextPage = () => {
-  return <div>Van Buren: Ручное и метательное оружие</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Van Buren: Ручное и метательное оружие</div>
+    </>
+  );
 };
 
 export default HandarmsPage;

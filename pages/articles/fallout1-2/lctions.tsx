@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../app/components/Breadcrumbs";
 
 const LctionsArticlePage: NextPage = () => {
-  return <div>Fallout 1-2 articles - Сравнительный анализ локаций</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Fallout 1-2 articles - Сравнительный анализ локаций</div>
+    </>
+  );
 };
 
 export default LctionsArticlePage;

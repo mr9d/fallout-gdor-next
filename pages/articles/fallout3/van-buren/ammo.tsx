@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const AmmoPage: NextPage = () => {
-  return <div>Van Buren: Боеприпасы</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Van Buren: Боеприпасы</div>
+    </>
+  );
 };
 
 export default AmmoPage;

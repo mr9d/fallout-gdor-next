@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../app/components/Breadcrumbs";
 
 const LinksPage: NextPage = () => {
-  return <div>Ссылки</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Ссылки</div>
+    </>
+  );
 };
 
 export default LinksPage;

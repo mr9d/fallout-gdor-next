@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../app/components/Breadcrumbs";
 
 const ModSortArticlePage: NextPage = () => {
-  return <div>Fallout 1-2 articles - Подземелья Модока</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Fallout 1-2 articles - Подземелья Модока</div>
+    </>
+  );
 };
 
 export default ModSortArticlePage;

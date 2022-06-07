@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const THandPage: NextPage = () => {
-  return <div>Рука Танглера</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Рука Танглера</div>
+    </>
+  );
 };
 
 export default THandPage;

@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const JoeDiggingsPage: NextPage = () => {
-  return <div>Раскопки - Старый Джо, он же Ян</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>Раскопки - Старый Джо, Ян</div>
+    </>
+  );
 };
 
 export default JoeDiggingsPage;

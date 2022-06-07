@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
+import { Breadcrumbs } from "../../../../app/components/Breadcrumbs";
 
 const MomentsArticlePage: NextPage = () => {
-  return <div>17 моментов постядерной весны</div>;
+  return (
+    <>
+      <Breadcrumbs />
+      <div>17 моментов постядерной весны</div>
+    </>
+  );
 };
 
 export default MomentsArticlePage;
