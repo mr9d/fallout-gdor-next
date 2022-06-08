@@ -1,0 +1,35 @@
+.newsitem {
+  border: 1px solid #fff;
+  background: #272727;
+  padding: 15px;
+  margin-bottom: 2em;
+}
+
+.newsitem__date {
+  color: #777777;
+  margin-bottom: 15px;
+}
+
+.newsitem p:first-child {
+  margin-top: 0;
+}
+
+.newsitem p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 550px) {
+  .newsitem {
+    padding: 1.5em 15px;
+  }
+
+  .newsitem__date {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .newsitem {
+    padding: 1.5em;
+  }
+}

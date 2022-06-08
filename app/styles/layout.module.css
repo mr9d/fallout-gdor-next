@@ -56,6 +56,7 @@
 }
 
 @media screen and (min-width: 750px) {
+
   .page__header,
   .page__main,
   .page__footer {
@@ -85,6 +86,7 @@
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
+  text-decoration: none;
 }
 
 .logolink__title {
@@ -170,6 +172,11 @@
   height: 114px;
   padding-left: 44px;
   max-width: 950px;
+}
+
+.headernav a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1100px) {
@@ -326,6 +333,7 @@
 .sandwichpopup a {
   display: block;
   color: #ffffff;
+  text-decoration: none;
   padding: 0.5em;
 }
 
@@ -345,13 +353,22 @@
   display: grid;
   row-gap: 2em;
   grid-template-areas:
-  "toplink"
-  "copyright"
-  "slogan"
-  "links"
-  "technologies"
-  "legal"
-  "contacts";
+    "toplink"
+    "copyright"
+    "slogan"
+    "links"
+    "technologies"
+    "legal"
+    "contacts";
+}
+
+.page__footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.page__footer a:hover {
+  color: #FFD600;
 }
 
 .page__footer p {
@@ -405,10 +422,6 @@
 .footerlinks li {
   list-style: none;
   white-space: nowrap;
-}
-
-.footerlinks a:hover {
-  color: #FFD600;
 }
 
 .footertechnologies {
@@ -486,10 +499,10 @@
     row-gap: 0;
     grid-template-columns: 30% 30% 40%;
     grid-template-areas:
-    "toplink    toplink toplink"
-    "copyright  links   technologies"
-    "slogan     links   technologies"
-    "contacts   legal   legal";
+      "toplink    toplink toplink"
+      "copyright  links   technologies"
+      "slogan     links   technologies"
+      "contacts   legal   legal";
   }
 
   .footertoplink {

@@ -1,0 +1,19 @@
+.russiandate__short {
+  white-space: nowrap;
+  display: inline;
+}
+
+.russiandate__long {
+  white-space: nowrap;
+  display: none;
+}
+
+@media screen and (min-width: 550px) {
+  .russiandate__short {
+    display: none;
+  }
+
+  .russiandate__long {
+    display: inline;
+  }
+}
