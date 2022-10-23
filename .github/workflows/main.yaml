@@ -24,7 +24,7 @@ jobs:
 
       - name: Pack
         run: |
-          tar -c -f package.tar .next/standalone
+          tar -pcf package.tar .next/standalone/
 
       - name: Setup SSH key
         env:
