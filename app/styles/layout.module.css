@@ -473,13 +473,9 @@
   margin-right: 14px;
 }
 
-.footercontacts a {
-  display: block;
-  line-height: 1;
-}
-
-.footercontacts a:hover {
+.footercontacts img:hover {
   filter: brightness(0) saturate(100%) invert(87%) sepia(17%) saturate(5087%) hue-rotate(358deg) brightness(103%) contrast(105%);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 550px) {

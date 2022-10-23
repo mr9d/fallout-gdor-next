@@ -33,3 +33,21 @@
     padding: 1.5em;
   }
 }
+
+.newsalllink {
+  display: flex;
+  justify-content: center;
+}
+
+.newsalllink a {
+  display: block;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+
+.newsalllink a:hover {
+  border-color: #FFD600;
+  color: #FFD600;
+}

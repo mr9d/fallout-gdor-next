@@ -13,6 +13,7 @@ import html5Svg from "../../public/images/layout/tech/html5.svg";
 import css3Svg from "../../public/images/layout/tech/css3.svg";
 import reactSvg from "../../public/images/layout/tech/react.svg";
 import nextjsSvg from "../../public/images/layout/tech/nextjs.svg";
+import Link from "next/link";
 
 const DefaultLayout: FC = ({ children }) => {
   const [sandwichOpened, setSandwichOpened] = useState<boolean>(false);
@@ -60,11 +61,11 @@ const DefaultLayout: FC = ({ children }) => {
       <footer className={styles.page__footer}>
         <div className={styles.page__sideborders}>
           <section className={styles.footertoplink}>
-            <a href="#top">Наверх &uarr;</a>
+            <Link href="#top">Наверх &uarr;</Link>
           </section>
           <section className={styles.footercopyright}>
             <p>
-              &copy;2007-{new Date().getFullYear()}, <a href="mailto:kaa_12@mail.ru">Александр Козлов</a>
+              &copy;2007-{new Date().getFullYear()}, <Link href="mailto:kaa_12@mail.ru">Александр Козлов</Link>
             </p>
           </section>
           <section className={styles.footerslogan}>
@@ -78,7 +79,7 @@ const DefaultLayout: FC = ({ children }) => {
                 </ActiveLink>
               </li>
               <li>
-                <a href="https://github.com/mr9d/fallout-gdor-next">GitHub</a>
+                <Link href="https://github.com/mr9d/fallout-gdor-next">GitHub</Link>
               </li>
               <li>
                 <ActiveLink href="/about/music" activeClassName={styles.active}>
@@ -129,24 +130,24 @@ const DefaultLayout: FC = ({ children }) => {
           <section className={styles.footercontacts}>
             <ul>
               <li>
-                <a href="mailto:kaa_12@mail.ru">
+                <Link href="mailto:kaa_12@mail.ru" passHref>
                   <Image src={emailSvg} width={30} height={30} alt="Электронная почта" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/mrgd/">
+                <Link href="https://www.linkedin.com/in/mrgd/" passHref>
                   <Image src={linkedinSvg} width={30} height={30} alt="LinkedIn" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://vk.com/gravedigger">
+                <Link href="https://vk.com/gravedigger" passHref>
                   <Image src={vkSvg} width={30} height={30} alt="VK" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://github.com/mr9d/fallout-gdor-next">
+                <Link href="https://github.com/mr9d/fallout-gdor-next" passHref>
                   <Image src={githubSvg} width={30} height={30} alt="GitHub" />
-                </a>
+                </Link>
               </li>
             </ul>
           </section>

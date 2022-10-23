@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 
-import styles from "../styles/newsitem.module.css";
+import styles from "../styles/news.module.css";
 import { RussianDate } from "./RussianDate";
 
 type NewsItemProps = {
