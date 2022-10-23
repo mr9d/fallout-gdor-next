@@ -26,6 +26,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
+          mkdir ~/.ssh
           echo ${SSH_PRIVATE_KEY} > ~/.ssh/id_rsa
           scp -o StrictHostKeyChecking=no -v -P "49498" -r .next/standalone/ ghintegration@ovz1.kaa.0n03n.vps.myjino.ru:~
 
