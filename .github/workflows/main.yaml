@@ -26,7 +26,7 @@ jobs:
         run: |
           tar -c -f package.tar .next/standalone
 
-      - name: Prepare SSH key
+      - name: Setup SSH key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
@@ -42,5 +42,5 @@ jobs:
 
       - name: Unpack
         run: |
-          ssh ghintegration@ovz1.kaa.0n03n.vps.myjino.ru 'tar -x -f package.tar'
+          ssh -o StrictHostKeyChecking=no ghintegration@ovz1.kaa.0n03n.vps.myjino.ru 'tar -x -f package.tar'
 
