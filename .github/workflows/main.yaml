@@ -54,5 +54,5 @@ jobs:
       - name: Rerun application
         run: |
           ssh -o StrictHostKeyChecking=no -v -p "49498" ghintegration@ovz1.kaa.0n03n.vps.myjino.ru '\
-          pm2 start app/server.js \
+          pm2 start app/server.js -f \
           '
