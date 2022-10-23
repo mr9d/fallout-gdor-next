@@ -43,4 +43,9 @@ jobs:
       - name: Unpack
         run: |
           ssh -o StrictHostKeyChecking=no -v -p "49498" ghintegration@ovz1.kaa.0n03n.vps.myjino.ru 'tar -x -f package.tar'
+          mkdir app
+          cp -r .next/standalone/* app
 
+      - name: Rerun application
+        run: |
+          ssh -o StrictHostKeyChecking=no -v -p "49498" ghintegration@ovz1.kaa.0n03n.vps.myjino.ru 'pm2 start app/server.js'
