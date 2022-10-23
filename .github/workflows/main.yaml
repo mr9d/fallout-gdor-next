@@ -44,7 +44,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -v -p "49498" ghintegration@ovz1.kaa.0n03n.vps.myjino.ru 'tar -x -f package.tar'
           mkdir -p app
-          cp -r .next/standalone/* app
+          cp -r .next/standalone/. app
 
       - name: Rerun application
         run: |
