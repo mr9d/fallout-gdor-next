@@ -42,5 +42,5 @@ jobs:
 
       - name: Unpack
         run: |
-          ssh -o StrictHostKeyChecking=no ghintegration@ovz1.kaa.0n03n.vps.myjino.ru 'tar -x -f package.tar'
+          ssh -o StrictHostKeyChecking=no -v -P "49498" ghintegration@ovz1.kaa.0n03n.vps.myjino.ru 'tar -x -f package.tar'
 
