@@ -1,0 +1,31 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Build
+        run: |
+          npm install -g yarn
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Deploy
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          echo ${SSH_PRIVATE_KEY} > ~/.ssh/id_rsa
+          scp -o StrictHostKeyChecking=no -v -P "49498" -r .next/standalone/ ghintegration@ovz1.kaa.0n03n.vps.myjino.ru:~
+
