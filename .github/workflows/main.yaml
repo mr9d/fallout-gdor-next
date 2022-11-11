@@ -24,7 +24,11 @@ jobs:
 
       - name: Pack
         run: |
-          tar -pcf package.tar .next/standalone .next/standalone/.next public .next/static
+          tar -pcf package.tar \
+          .next/standalone \
+          .next/standalone/.next \
+          public \
+          .next/static
 
       - name: Setup SSH key
         env:
@@ -49,10 +53,4 @@ jobs:
           mv app/.next/standalone/* app && \
           mv app/.next/standalone/.next/* app/.next && \
           rm -rf app/.next/standalone \
-          '
-
-      - name: Rerun application
-        run: |
-          ssh -o StrictHostKeyChecking=no -v -p "49498" ghintegration@ovz1.kaa.0n03n.vps.myjino.ru '\
-          pm2 start app/server.js -f \
           '
