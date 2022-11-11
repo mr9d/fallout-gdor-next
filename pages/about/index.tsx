@@ -11,6 +11,7 @@ const AboutPage: NextPage = () => {
         <li><Link href="/about/links">Ссылки</Link></li>
         <li><Link href="/about/music">Музыка</Link></li>
       </ul>
+      123
     </>
   );
 };
